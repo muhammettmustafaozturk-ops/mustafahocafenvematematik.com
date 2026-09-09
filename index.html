@@ -226,8 +226,11 @@ footer{background:#061c2c;color:#c7d4df;padding:28px 0;text-align:center}
           <div class="portal-item"><div><strong>🎮 Oyunlar & Mini Testler</strong><small>Öğrenciye özel içerikler</small></div><button onclick="openLogin('oyun')">Giriş</button></div>
         </div>
         <div class="live">
-          <div><b>🎥 Canlı Ders</b><br><small>Canlı derse katılmak için ayrı şifre gerekir.</small></div>
-          <button onclick="openLogin('canli')">🎥 Canlı Derse Gir →</button>
+          <div><b>🎥 Canlı Ders</b><br><small>Canlı derse katılmak için aşağıdaki bağlantıya tıklayabilirsin.</small></div>
+          <a href="https://meet.google.com/jhr-hrgy-ivt" target="_blank" rel="noopener"
+             style="background:#ffbd19;color:#162837;border-radius:10px;padding:10px 15px;font-weight:900;white-space:nowrap;">
+            🎥 Canlı Derse Katıl →
+          </a>
         </div>
       </div>
 
@@ -254,14 +257,7 @@ footer{background:#061c2c;color:#c7d4df;padding:28px 0;text-align:center}
 </section>
 </main>
 
-<footer>
-  © 2026 Mustafa Hoca Fen ve Matematik • İlkokul • Ortaokul • Lise • ÖABT
-  <br>
-  <a href="https://www.instagram.com/mustafahocafenmat/" target="_blank" rel="noopener"
-     style="display:inline-block;margin-top:10px;color:#ffbd19;font-weight:800;">
-    📸 Instagram: @mustafahocafenmat
-  </a>
-</footer>
+<footer>© 2026 Mustafa Hoca Fen ve Matematik • İlkokul • Ortaokul • Lise • ÖABT</footer>
 
 <div id="loginModal" class="modal" onclick="if(event.target===this) closeLogin()">
   <div class="modal-box">
@@ -289,13 +285,12 @@ const PASSWORDS = {
   kimya: "kimya123",
   biyoloji: "biyoloji123",
   oabt: "oabt123",
-  oyun: "oyun123",
-  canli: "canli123"
+  oyun: "oyun123"
 };
 const TITLES = {
   genel:"👨‍🎓 Öğrenci Paneli", ilkokul:"🏫 İlkokul İçerikleri", ortaokul:"📘 Ortaokul İçerikleri",
   liseMat:"📐 Lise Matematik", fizik:"⚡ Lise Fizik", kimya:"🧪 Lise Kimya",
-  biyoloji:"🧬 Lise Biyoloji", oabt:"🧑‍🏫 Fen Bilimleri ÖABT", oyun:"🎮 Oyunlar & Mini Testler", canli:"🎥 Canlı Ders"
+  biyoloji:"🧬 Lise Biyoloji", oabt:"🧑‍🏫 Fen Bilimleri ÖABT", oyun:"🎮 Oyunlar & Mini Testler"
 };
 let activeType = "genel";
 function openLogin(type) {
@@ -329,16 +324,7 @@ function checkLogin(){
 
   const box=document.getElementById("protectedContent");
   let content="";
-  if(activeType==="canli"){
-    content=`<div class="unlock" style="border:2px solid #ffbd19;background:#fffaf0">
-      <h4>🎥 Canlı Ders Alanı Açıldı ✓</h4>
-      <p>Şifre doğru. Canlı derse katılmak için aşağıdaki butona tıklayabilirsin.</p>
-      <div class="resource-list">
-        <a href="https://meet.google.com/jhr-hrgy-ivt" target="_blank" rel="noopener" style="background:#ffbd19;color:#102331;text-align:center;font-size:16px">🎥 Google Meet Canlı Dersine Katıl →</a>
-      </div>
-      <p style="margin-top:12px;font-size:13px;color:#667785">Meet bağlantısı: meet.google.com/jhr-hrgy-ivt</p>
-    </div>`;
-  } else {
+  {
     content=`<div class="unlock"><h4>${TITLES[activeType]} açıldı ✓</h4><p>Bu alana daha sonra PDF, video, oyun, mini test, ödev ve çalışma dosyaları eklenebilir.</p><div class="resource-list"><a href="#basvuru">📚 Çalışma Planına Dön</a><a href="#dersler">📖 Ders Konularına Bak</a></div></div>`;
   }
   box.innerHTML=content;
