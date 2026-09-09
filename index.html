@@ -227,7 +227,7 @@ footer{background:#061c2c;color:#c7d4df;padding:28px 0;text-align:center}
         </div>
         <div class="live">
           <div><b>🎥 Canlı Ders</b><br><small>Canlı derse katılmak için ayrı şifre gerekir.</small></div>
-          <button onclick="openLogin('canli')">🔐 Canlı Derse Gir</button>
+          <button onclick="openLogin('canli')">🎥 Canlı Derse Gir →</button>
         </div>
       </div>
 
@@ -323,7 +323,14 @@ function checkLogin(){
   const box=document.getElementById("protectedContent");
   let content="";
   if(activeType==="canli"){
-    content=`<div class="unlock"><h4>🎥 Canlı Ders Alanı Açıldı</h4><p>Canlı derse katılmak için aşağıdaki bağlantıyı kullanabilirsin.</p><div class="resource-list"><a href="https://meet.google.com/jhr-hrgy-ivt" target="_blank" rel="noopener">🔗 Google Meet Canlı Dersine Katıl</a></div></div>`;
+    content=`<div class="unlock" style="border:2px solid #ffbd19;background:#fffaf0">
+      <h4>🎥 Canlı Ders Alanı Açıldı ✓</h4>
+      <p>Şifre doğru. Canlı derse katılmak için aşağıdaki butona tıklayabilirsin.</p>
+      <div class="resource-list">
+        <a href="https://meet.google.com/jhr-hrgy-ivt" target="_blank" rel="noopener" style="background:#ffbd19;color:#102331;text-align:center;font-size:16px">🎥 Google Meet Canlı Dersine Katıl →</a>
+      </div>
+      <p style="margin-top:12px;font-size:13px;color:#667785">Meet bağlantısı: meet.google.com/jhr-hrgy-ivt</p>
+    </div>`;
   } else {
     content=`<div class="unlock"><h4>${TITLES[activeType]} açıldı ✓</h4><p>Bu alana daha sonra PDF, video, oyun, mini test, ödev ve çalışma dosyaları eklenebilir.</p><div class="resource-list"><a href="#basvuru">📚 Çalışma Planına Dön</a><a href="#dersler">📖 Ders Konularına Bak</a></div></div>`;
   }
