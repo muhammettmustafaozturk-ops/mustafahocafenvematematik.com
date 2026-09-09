@@ -1,12 +1,16 @@
-Mustafa Hoca Fen ve Matematik - GitHub Pages sitesi
+Mustafa Hoca Fen ve Matematik — özel ders sitesi.
 
-Dosyalar:
-- index.html
-- style.css
-- assets/mustafa-hoca-profil-clean.jpg
+Dersler:
+İlkokul Fen Bilimleri, İlkokul Matematik
+Ortaokul Fen Bilimleri, Ortaokul Matematik
+LGS Fen Bilimleri, LGS Matematik
+TYT Matematik, TYT Fizik, TYT Kimya, TYT Biyoloji
+AYT Matematik, AYT Fizik, AYT Kimya, AYT Biyoloji
+Fen Bilimleri ÖABT
 
-GitHub Pages:
-Repository > Settings > Pages > Deploy from a branch > main > /(root)
+WhatsApp: 0537 827 64 52
+2026 AGS Fen Bilimleri Türkiye 9.'su
+İlköğretim Matematik Öğretmenliği ile çift ana dal
+3+ yıl özel ders & dershane deneyimi
 
-Güncelleme:
-Bu klasördeki dosyaları GitHub repository köküne yükleyin. assets klasörü de yüklenmelidir.
+GitHub Pages'e yüklerken assets klasörünü de yükle.
