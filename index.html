@@ -1,194 +1,55 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Mustafa Hoca Fen Mat | LGS, TYT, AYT ve Fen Bilimleri ÖABT özel ders">
-  <title>Mustafa Hoca Fen Mat | Özel Ders</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mustafa Hoca Fen ve Matematik | Özel Ders</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:#102235;background:#f7f9fb}a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}
+.header{height:88px;background:#fff;border-bottom:1px solid #e8edf2;position:sticky;top:0;z-index:20}.nav{height:88px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px}.brand-logo{width:50px;height:50px;border-radius:50%;border:2px solid #e5cf99;object-fit:cover;object-position:center top;background:#eee}.m-logo{width:50px;height:50px;border-radius:15px;background:#071d31;color:#fbbd24;display:grid;place-items:center;font-size:26px;font-weight:900}.brand b{display:block;font-size:20px}.brand small{display:block;color:#d89d00;font-weight:800;font-style:italic;font-size:15px;margin-top:3px}.links{display:flex;align-items:center;gap:28px;font-weight:700;font-size:15px}.links a:hover{color:#d89d00}.student-link{padding:12px 17px;border-radius:12px;background:#eef5fb;color:#092139;border:1px solid #d8e4ed}.apply-link{padding:14px 21px;border-radius:28px;background:#fbbd24;color:#152536}.menu{display:none;border:0;background:none;font-size:28px}
+.hero{background:linear-gradient(115deg,#061a2c,#113b57);color:#fff;padding:92px 0 75px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:50px;align-items:center}.tag,.mini{color:#fbbd24;font-size:13px;font-weight:900;letter-spacing:2px}.hero h1{font-size:clamp(46px,6vw,76px);line-height:1.02;letter-spacing:-3px;margin:17px 0 25px}.hero h1 span{color:#fbbd24}.hero p{font-size:18px;line-height:1.65;color:#d4e0e9;max-width:650px}.buttons{display:flex;gap:12px;margin:30px 0}.btn{display:inline-block;padding:15px 21px;border-radius:12px;font-weight:900;font-size:14px;border:1px solid transparent;cursor:pointer}.gold{background:#fbbd24;color:#142536}.outline{border-color:#7890a4;color:#fff;background:transparent}.badges{display:grid;grid-template-columns:repeat(3,1fr);margin-top:38px;gap:10px}.badge{border-left:2px solid #527089;padding-left:13px;font-size:11px;color:#b9c9d5;line-height:1.5}.badge strong{display:block;color:#fff;font-size:13px}.hero-photo-wrap{position:relative;display:flex;justify-content:center}.hero-photo{width:390px;height:390px;border:7px solid #e8d7ae;border-radius:50%;overflow:hidden;background:#e9e9e9;box-shadow:0 25px 70px #0006}.hero-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center top;transform:scale(1.01)}.photo-label{position:absolute;bottom:-10px;background:#fbbd24;color:#132536;border-radius:14px;padding:15px 24px;text-align:center;font-weight:900;box-shadow:0 12px 30px #0005}.photo-label small{display:block;font-size:11px;margin-top:4px}
+.strip{background:#fff;border-bottom:1px solid #e5ebf0}.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}.strip-grid div{padding:24px;border-right:1px solid #e5ebf0}.strip-grid div:last-child{border:0}.strip-grid strong,.strip-grid span{display:block}.strip-grid strong{font-size:13px}.strip-grid span{font-size:11px;color:#71808d;margin-top:4px}
+.section{padding:82px 0}.heading{text-align:center;max-width:700px;margin:0 auto 45px}.heading h2,.about h2,.student h2,.apply h2{font-size:42px;line-height:1.12;margin:9px 0 14px}.heading h2 span,.about h2 span,.student h2 span,.apply h2 span{color:#d89d00}.heading p,.about p,.student p{color:#667786;line-height:1.65}.courses{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.course{background:#fff;border:1px solid #e2e9ef;border-radius:20px;padding:25px;box-shadow:0 10px 30px #0d2d490d}.course-head{display:flex;gap:15px;align-items:center}.course-icon{width:60px;height:60px;border-radius:16px;display:grid;place-items:center;font-size:12px;font-weight:900;background:#e8f0ff;color:#356bdc}.course-icon.yellow{background:#fff5d6;color:#b57900}.course-icon.purple{background:#f0eaff;color:#7950c9}.course-icon.orange{background:#fff0e5;color:#e87520}.course h3{margin:0;font-size:20px}.course-head p{margin:5px 0 0;font-size:12px;color:#7a8996}.course ul{margin:20px 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:9px}.course li{background:#f6f8fa;border-radius:9px;padding:10px;font-size:11px}.course li:before{content:'✓ ';color:#16834a;font-weight:900}.course .course-apply{font-size:12px;font-weight:900;color:#0c2b44}
+.about{background:#fff}.about-grid{display:grid;grid-template-columns:390px 1fr;gap:70px;align-items:center}.about-photo{height:470px;border-radius:24px;overflow:hidden;background:#eee;box-shadow:0 20px 50px #071c3126}.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center top}.achievement{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}.achievement div{background:#f4f7f9;border:1px solid #e3e9ee;border-radius:13px;padding:14px}.achievement b,.achievement small{display:block}.achievement b{font-size:12px}.achievement small{font-size:10px;color:#70808e;margin-top:4px;line-height:1.4}
+.student{background:#eef4f8;padding:75px 0}.student-box{background:#fff;border:1px solid #dce7ef;border-radius:22px;padding:32px 36px;display:flex;align-items:center;justify-content:space-between;gap:25px;box-shadow:0 12px 35px #0d2d490d}.student-box h2{font-size:35px}.student-btn{font-size:15px;white-space:nowrap}.student-content{display:none;background:#fff;padding:75px 0}.student-content.show{display:block}.games{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.game{padding:28px;border:1px solid #e1e8ee;border-radius:18px;background:#f8fafc}.game b{display:block;font-size:17px}.game span{display:block;color:#758592;font-size:11px;margin-top:8px}
+.apply{background:#071d31;color:#fff;padding:85px 0}.apply-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:65px}.apply p{color:#b9c8d3;line-height:1.65}.whatsapp{display:inline-block;margin-top:12px;background:#16834a;padding:13px 17px;border-radius:10px;font-size:12px;font-weight:900}.form{background:#fff;color:#162536;border-radius:20px;padding:27px;display:grid;grid-template-columns:1fr 1fr;gap:14px}.form label{font-size:11px;font-weight:900}.form input,.form select,.form textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #dbe3e9;border-radius:9px;background:#f8fafc;font:inherit}.full{grid-column:1/-1}.form fieldset{grid-column:1/-1;border:0;padding:0;margin:2px 0}.form legend{font-size:11px;font-weight:900;margin-bottom:8px}.radio{display:inline-flex!important;align-items:center;margin-right:18px;font-weight:500!important}.radio input{width:auto;margin:0 6px 0 0}.footer{background:#041321;color:#aab9c5;padding:28px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer b{color:#fff}.footer a{margin-left:18px;font-size:12px}
+.modal{position:fixed;inset:0;background:#03111dcc;display:none;align-items:center;justify-content:center;z-index:50;padding:20px}.modal.show{display:flex}.login{width:min(420px,100%);background:#fff;border-radius:22px;padding:30px;text-align:center;position:relative}.close{position:absolute;right:14px;top:8px;border:0;background:none;font-size:30px;cursor:pointer;color:#64748b}.login h3{font-size:25px;margin:8px 0}.login p{color:#71808d;font-size:12px}.login input{width:100%;padding:13px;border:1px solid #dbe3e9;border-radius:10px;margin:12px 0;font:inherit}.error{height:18px;color:#c0392b;font-size:11px;font-weight:700}
+@media(max-width:900px){.links{gap:14px;font-size:13px}.hero-grid,.about-grid,.apply-grid{grid-template-columns:1fr}.hero-photo{width:340px;height:340px}.about-photo{max-width:390px;margin:auto}.student-box{flex-direction:column;align-items:flex-start}.games{grid-template-columns:1fr 1fr}}
+@media(max-width:650px){.header,.nav{height:76px}.menu{display:block}.links{display:none;position:absolute;top:76px;left:4%;right:4%;padding:14px;background:#fff;border-radius:14px;box-shadow:0 15px 35px #0002;flex-direction:column;align-items:stretch}.links.open{display:flex}.links a{padding:10px}.brand-logo,.m-logo{width:42px;height:42px}.brand b{font-size:17px}.brand small{font-size:12px}.hero{padding:58px 0}.hero h1{font-size:44px;letter-spacing:-2px}.buttons{flex-direction:column}.badges,.courses,.course ul,.achievement,.games{grid-template-columns:1fr}.hero-photo{width:285px;height:285px}.photo-label{font-size:12px}.strip-grid{grid-template-columns:1fr 1fr}.strip-grid div{padding:17px}.section{padding:65px 0}.heading h2,.about h2,.student h2,.apply h2{font-size:32px}.apply-grid{gap:35px}.form{grid-template-columns:1fr}.full{grid-column:auto}.form fieldset{grid-column:auto}.footer-inner{flex-direction:column;align-items:flex-start}}
+</style>
 </head>
 <body>
-<header class="header">
-  <div class="container nav">
-    <a class="brand" href="#anasayfa"><span class="logo">M</span><span><b>Mustafa Hoca</b><small>Fen ve Matematik</small></span></a>
-    <button class="menu" aria-label="Menü">☰</button>
-    <nav class="links">
-      <a href="#anasayfa">Ana Sayfa</a><a href="#dersler">Dersler</a><a href="#hakkimda">Hakkımda</a><a href="#ogrenci" class="student-btn">🎮 Öğrenci Girişi</a><a href="#basvuru" class="nav-btn">Başvuru Yap</a>
-    </nav>
-  </div>
-</header>
-
-<section id="anasayfa" class="hero">
-  <div class="container hero-grid">
-    <div class="hero-text">
-      <div class="tag">FEN & MATEMATİK • ÖZEL DERS</div>
-      <h1>Hedefimiz net,<br><em>çalışma planımız belli.</em></h1>
-      <p>LGS, TYT, AYT ve Fen Bilimleri ÖABT için kişiye özel çalışma programı, konu anlatımı, soru çözümü ve düzenli takip.</p>
-      <div class="buttons"><a class="btn gold" href="#basvuru">Ders Başvurusu →</a><a class="btn ghost" href="#hakkimda">Beni Tanı</a></div>
-      <div class="badges"><span>🏆 AGS Fen Bilimleri<br><b>Türkiye 9.'su</b></span><span>🎓 <b>Çift Ana Dal</b><br>İlköğretim Matematik</span><span>📚 <b>3+ Yıl</b><br>Özel Ders Deneyimi</span></div>
-    </div>
-    <div class="hero-visual">
-      <div class="circle"><img src="assets/mustafa-hoca-profil.jpg" alt="Mustafa Hoca Fen Mat"></div>
-      <div class="floating-card"><b>İlkokul • Ortaokul • Lise</b><small>LGS • TYT • AYT • ÖABT</small></div>
-    </div>
-  </div>
-</section>
-
-<section class="strip"><div class="container strip-grid">
-  <div><strong>🎯 Kişiye Özel</strong><span>Seviyene uygun plan</span></div>
-  <div><strong>📈 Net Takibi</strong><span>Gelişimini birlikte izle</span></div>
-  <div><strong>💻 Online & Yüz Yüze</strong><span>Sana uygun seçenek</span></div>
-  <div><strong>⭐ Sınav Odaklı</strong><span>Hedefe yönelik çalışma</span></div>
-</div></section>
-
-<section id="dersler" class="section">
-  <div class="container">
-    <div class="heading"><div class="mini">DERSLER</div><h2>Hedefine uygun <span>çalışalım.</span></h2><p>İhtiyacına göre konu, soru, deneme ve takip sürecini birlikte planlayalım.</p></div>
-    <div class="course-groups">
-      <article class="course-group">
-        <div class="group-head"><div class="group-icon">LGS</div><div><h3>LGS • Ortaokul</h3><p>Fen Bilimleri & Matematik</p></div></div>
-        <div class="course-list">
-          <span>✓ LGS Fen Bilimleri</span>
-          <span>✓ LGS Matematik</span>
-          <span>✓ Ortaokul Fen Bilimleri</span>
-          <span>✓ Ortaokul Matematik</span>
-        </div>
-        <a href="#basvuru">Bu alana başvur →</a>
-      </article>
-
-      <article class="course-group elementary">
-        <div class="group-head"><div class="group-icon elementary-icon">İLK</div><div><h3>İlkokul</h3><p>Fen Bilimleri & Matematik</p></div></div>
-        <div class="course-list">
-          <span>✓ İlkokul Fen Bilimleri</span>
-          <span>✓ İlkokul Matematik</span>
-          <span>✓ Temel konu desteği</span>
-          <span>✓ Soru çözümü & takip</span>
-        </div>
-        <a href="#basvuru">Bu alana başvur →</a>
-      </article>
-
-      <article class="course-group">
-        <div class="group-head"><div class="group-icon blue">TYT</div><div><h3>TYT</h3><p>Matematik & Fen Bilimleri</p></div></div>
-        <div class="course-list">
-          <span>✓ TYT Matematik</span>
-          <span>✓ TYT Fizik</span>
-          <span>✓ TYT Kimya</span>
-          <span>✓ TYT Biyoloji</span>
-        </div>
-        <a href="#basvuru">Bu alana başvur →</a>
-      </article>
-
-      <article class="course-group">
-        <div class="group-head"><div class="group-icon purple">AYT</div><div><h3>AYT</h3><p>Matematik & Fen Bilimleri</p></div></div>
-        <div class="course-list">
-          <span>✓ AYT Matematik</span>
-          <span>✓ AYT Fizik</span>
-          <span>✓ AYT Kimya</span>
-          <span>✓ AYT Biyoloji</span>
-        </div>
-        <a href="#basvuru">Bu alana başvur →</a>
-      </article>
-
-      <article class="course-group">
-        <div class="group-head"><div class="group-icon orange">ÖABT</div><div><h3>Fen Bilimleri ÖABT</h3><p>Alan bilgisi & sınav hazırlığı</p></div></div>
-        <div class="course-list">
-          <span>✓ Fen Bilimleri ÖABT</span>
-          <span>✓ Konu anlatımı</span>
-          <span>✓ Soru çözümü</span>
-          <span>✓ Deneme & eksik analizi</span>
-        </div>
-        <a href="#basvuru">Bu alana başvur →</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-<section id="hakkimda" class="section about">
-  <div class="container about-grid">
-    <div class="profile-card"><img src="assets/mustafa-hoca-profil.jpg" alt="Mustafa Hoca"><div><b>Mustafa Hoca</b><small>Fen & Matematik</small></div></div>
-    <div><div class="mini">HAKKIMDA</div><h2>Merhaba, ben <span>Mustafa.</span></h2>
-      <p>Yıldız Teknik Üniversitesi Eğitim Fakültesi Fen Bilgisi Öğretmenliği mezunuyum. İlköğretim Matematik Öğretmenliği ile çift ana dal yaparak eğitimimi iki alanda sürdürdüm.</p>
-      <p>2026 AGS Fen Bilimleri alanında <strong>Türkiye 9.'su</strong> oldum. Yaklaşık <strong>3 yıldır</strong> özel ders ve dershane deneyimimle öğrencilerimin hedeflerine ulaşmasına destek oluyorum.</p>
-      <div class="achievement"><div><b>Türkiye 9.'su</b><small>2026 AGS • Fen Bilimleri</small></div><div><b>Çift Ana Dal</b><small>İlköğretim Matematik Öğretmenliği</small></div><div><b>3+ Yıl</b><small>Özel ders & dershane</small></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="ogrenci" class="student-area">
-  <div class="container student-box">
-    <div>
-      <div class="mini">ÖĞRENCİ ALANI</div>
-      <h2>Oyunlar, mini testler ve <span>özel içerikler.</span></h2>
-      <p>Öğrencilerine özel hazırladığın içeriklere şifre ile giriş yapılabilir.</p>
-    </div>
-    <button class="btn gold" id="openLogin">🎮 Öğrenci Girişi →</button>
-  </div>
-</section>
-
-<div class="login-modal" id="loginModal" aria-hidden="true">
-  <div class="login-card">
-    <button class="close-login" id="closeLogin" aria-label="Kapat">×</button>
-    <div class="login-icon">🎮</div>
-    <div class="mini">ÖĞRENCİ GİRİŞİ</div>
-    <h3>Özel içerik alanı</h3>
-    <p>Öğretmeninin verdiği şifreyi gir.</p>
-    <input id="studentPassword" type="password" placeholder="Şifre" autocomplete="off">
-    <button class="btn gold full" id="loginButton">Giriş Yap →</button>
-    <div class="login-error" id="loginError"></div>
-  </div>
-</div>
-
-<section id="studentContent" class="student-content" hidden>
-  <div class="container">
-    <div class="mini">ÖĞRENCİ PANELİ</div>
-    <h2>Hoş geldin! <span>Hazırsan başlayalım.</span></h2>
-    <div class="game-grid">
-      <div class="game-card"><b>🎯 Mini Test</b><span>Yakında</span></div>
-      <div class="game-card"><b>🧠 Hızlı Quiz</b><span>Yakında</span></div>
-      <div class="game-card"><b>🏆 Puan Tablosu</b><span>Yakında</span></div>
-    </div>
-  </div>
-</section>
-
-<section id="basvuru" class="apply">
-  <div class="container apply-grid">
-    <div><div class="mini">DERS BAŞVURUSU</div><h2>Hedefini birlikte <span>planlayalım.</span></h2><p>Bilgilerini doldur. Gönder dediğinde WhatsApp açılacak ve başvuru mesajın hazır şekilde oluşturulacak.</p>
-      <a class="whatsapp" href="https://wa.me/905378276452" target="_blank">💬 WhatsApp'tan direkt yaz</a>
-    </div>
-    <form id="form">
-      <label>Ad Soyad<input name="name" required placeholder="Adınız Soyadınız"></label>
-      <label>Sınıf / Seviye<select name="level" required><option value="">Seçiniz</option><option>8. sınıf (LGS)</option><option>9. sınıf</option><option>10. sınıf</option><option>11. sınıf</option><option>12. sınıf</option><option>Mezun</option><option>ÖABT</option></select></label>
-      <label>Ders<select name="course" required><option value="">Seçiniz</option><option>LGS Fen Bilimleri</option><option>LGS Matematik</option><option>Ortaokul Fen Bilimleri</option><option>Ortaokul Matematik</option><option>İlkokul Fen Bilimleri</option><option>İlkokul Matematik</option><option>TYT Matematik</option><option>TYT Fizik</option><option>TYT Kimya</option><option>TYT Biyoloji</option><option>AYT Matematik</option><option>AYT Fizik</option><option>AYT Kimya</option><option>AYT Biyoloji</option><option>Fen Bilimleri ÖABT</option></select></label>
-      <label>Telefon<input name="phone" required type="tel" placeholder="05xx xxx xx xx"></label>
-      <fieldset><legend>Ders Türü</legend><label class="radio"><input type="radio" name="type" value="Online" checked> Online</label><label class="radio"><input type="radio" name="type" value="Yüz yüze"> Yüz yüze</label></fieldset>
-      <label class="full">Mesajınız<textarea name="message" rows="3" placeholder="Hedefiniz, mevcut netleriniz veya belirtmek istediğiniz konu..."></textarea></label>
-      <button class="btn gold full" type="submit">WhatsApp'tan Başvuruyu Gönder →</button>
-    </form>
-  </div>
-</section>
-
-<footer><div class="container footer"><b>Mustafa Hoca Fen ve Matematik</b><span>LGS • TYT • AYT • ÖABT</span><div><a href="https://wa.me/905378276452">WhatsApp</a><a href="#basvuru">Başvuru</a></div></div></footer>
+<header class="header"><div class="container nav">
+<a class="brand" href="#anasayfa"><img class="brand-logo" src="assets/profil.jpg" alt="Mustafa Hoca"><span><b>Mustafa Hoca</b><small>Fen ve Matematik</small></span></a>
+<button class="menu" id="menu">☰</button>
+<nav class="links" id="links"><a href="#anasayfa">Ana Sayfa</a><a href="#dersler">Dersler</a><a href="#hakkimda">Hakkımda</a><a class="student-link" href="#ogrenci">🎮 Öğrenci Girişi</a><a class="apply-link" href="#basvuru">Başvuru Yap</a></nav>
+</div></header>
+<section class="hero" id="anasayfa"><div class="container hero-grid"><div>
+<div class="tag">FEN & MATEMATİK • ÖZEL DERS</div><h1>Hedefimiz net,<br><span>çalışma planımız belli.</span></h1><p>LGS, TYT, AYT ve Fen Bilimleri ÖABT için kişiye özel çalışma programı, konu anlatımı, soru çözümü ve düzenli takip.</p>
+<div class="buttons"><a class="btn gold" href="#basvuru">Ders Başvurusu →</a><a class="btn outline" href="#hakkimda">Beni Tanı</a></div>
+<div class="badges"><div class="badge">🏆 AGS Fen Bilimleri<strong>Türkiye 9.'su</strong></div><div class="badge">🎓 <strong>Çift Ana Dal</strong>İlköğretim Matematik</div><div class="badge">📚 <strong>3+ Yıl</strong>Özel Ders Deneyimi</div></div>
+</div><div class="hero-photo-wrap"><div class="hero-photo"><img src="assets/profil.jpg" alt="Mustafa Hoca Fen ve Matematik"></div><div class="photo-label">İlkokul • Ortaokul • Lise<small>LGS • TYT • AYT • ÖABT</small></div></div></div></section>
+<section class="strip"><div class="container strip-grid"><div><strong>🎯 Kişiye Özel</strong><span>Seviyene uygun plan</span></div><div><strong>📈 Net Takibi</strong><span>Gelişimini birlikte izle</span></div><div><strong>💻 Online & Yüz Yüze</strong><span>Sana uygun seçenek</span></div><div><strong>⭐ Sınav Odaklı</strong><span>Hedefe yönelik çalışma</span></div></div></section>
+<section class="section" id="dersler"><div class="container"><div class="heading"><div class="mini">DERSLER</div><h2>Hedefine uygun <span>çalışalım.</span></h2><p>İhtiyacına göre konu, soru, deneme ve takip sürecini birlikte planlayalım.</p></div>
+<div class="courses">
+<article class="course"><div class="course-head"><div class="course-icon">İLK</div><div><h3>İlkokul</h3><p>Fen Bilimleri & Matematik</p></div></div><ul><li>İlkokul Fen Bilimleri</li><li>İlkokul Matematik</li><li>Temel konu desteği</li><li>Soru çözümü & takip</li></ul><a class="course-apply" href="#basvuru">Bu alana başvur →</a></article>
+<article class="course"><div class="course-head"><div class="course-icon">LGS</div><div><h3>LGS • Ortaokul</h3><p>Fen Bilimleri & Matematik</p></div></div><ul><li>LGS Fen Bilimleri</li><li>LGS Matematik</li><li>Ortaokul Fen Bilimleri</li><li>Ortaokul Matematik</li></ul><a class="course-apply" href="#basvuru">Bu alana başvur →</a></article>
+<article class="course"><div class="course-head"><div class="course-icon purple">TYT</div><div><h3>TYT</h3><p>Matematik & Fen Bilimleri</p></div></div><ul><li>TYT Matematik</li><li>TYT Fizik</li><li>TYT Kimya</li><li>TYT Biyoloji</li></ul><a class="course-apply" href="#basvuru">Bu alana başvur →</a></article>
+<article class="course"><div class="course-head"><div class="course-icon orange">AYT</div><div><h3>AYT</h3><p>Matematik & Fen Bilimleri</p></div></div><ul><li>AYT Matematik</li><li>AYT Fizik</li><li>AYT Kimya</li><li>AYT Biyoloji</li></ul><a class="course-apply" href="#basvuru">Bu alana başvur →</a></article>
+<article class="course"><div class="course-head"><div class="course-icon yellow">ÖABT</div><div><h3>Fen Bilimleri ÖABT</h3><p>Alan bilgisi & sınav hazırlığı</p></div></div><ul><li>Fen Bilimleri ÖABT</li><li>Konu anlatımı</li><li>Soru çözümü</li><li>Deneme & eksik analizi</li></ul><a class="course-apply" href="#basvuru">Bu alana başvur →</a></article>
+</div></div></section>
+<section class="about section" id="hakkimda"><div class="container about-grid"><div class="about-photo"><img src="assets/profil.jpg" alt="Mustafa Hoca"></div><div><div class="mini">HAKKIMDA</div><h2>Merhaba, ben <span>Mustafa.</span></h2><p>Yıldız Teknik Üniversitesi Eğitim Fakültesi Fen Bilgisi Öğretmenliği mezunuyum. İlköğretim Matematik Öğretmenliği ile çift ana dal yaparak eğitimimi iki alanda sürdürdüm.</p><p>2026 AGS Fen Bilimleri alanında <strong>Türkiye 9.'su</strong> oldum. Yaklaşık <strong>3 yıldır</strong> özel ders ve dershane deneyimimle öğrencilerimin hedeflerine ulaşmasına destek oluyorum.</p><div class="achievement"><div><b>Türkiye 9.'su</b><small>2026 AGS • Fen Bilimleri</small></div><div><b>Çift Ana Dal</b><small>İlköğretim Matematik Öğretmenliği</small></div><div><b>3+ Yıl</b><small>Özel ders & dershane</small></div></div></div></div></section>
+<section class="student" id="ogrenci"><div class="container student-box"><div><div class="mini">ÖĞRENCİ ALANI</div><h2>Oyunlar ve <span>özel içerikler.</span></h2><p>Öğrencilerin için hazırlayacağın mini test, quiz ve oyunlara özel giriş alanı.</p></div><button class="btn gold student-btn" id="openLogin">🎮 Öğrenci Girişi →</button></div></section>
+<section class="student-content" id="studentContent"><div class="container"><div class="mini">ÖĞRENCİ PANELİ</div><h2>Hoş geldin! <span>Hazırsan başlayalım.</span></h2><div class="games"><div class="game"><b>🎯 Mini Testler</b><span>Yakında eklenecek.</span></div><div class="game"><b>🧠 Hızlı Quiz</b><span>Yakında eklenecek.</span></div><div class="game"><b>🏆 Puan Tablosu</b><span>Yakında eklenecek.</span></div></div></div></section>
+<section class="apply" id="basvuru"><div class="container apply-grid"><div><div class="mini">DERS BAŞVURUSU</div><h2>Hedefini birlikte <span>planlayalım.</span></h2><p>Bilgilerini doldur. Gönder dediğinde WhatsApp açılır ve başvuru mesajın hazır olur.</p><a class="whatsapp" href="https://wa.me/905378276452" target="_blank">💬 WhatsApp'tan direkt yaz</a></div>
+<form class="form" id="form"><label>Ad Soyad<input name="name" required></label><label>Sınıf / Seviye<select name="level" required><option value="">Seçiniz</option><option>İlkokul</option><option>5. sınıf</option><option>6. sınıf</option><option>7. sınıf</option><option>8. sınıf (LGS)</option><option>9. sınıf</option><option>10. sınıf</option><option>11. sınıf</option><option>12. sınıf</option><option>Mezun</option><option>ÖABT</option></select></label><label>Ders<select name="course" required><option value="">Seçiniz</option><option>İlkokul Fen Bilimleri</option><option>İlkokul Matematik</option><option>LGS Fen Bilimleri</option><option>LGS Matematik</option><option>Ortaokul Fen Bilimleri</option><option>Ortaokul Matematik</option><option>TYT Matematik</option><option>TYT Fizik</option><option>TYT Kimya</option><option>TYT Biyoloji</option><option>AYT Matematik</option><option>AYT Fizik</option><option>AYT Kimya</option><option>AYT Biyoloji</option><option>Fen Bilimleri ÖABT</option></select></label><label>Telefon<input name="phone" required type="tel" placeholder="05xx xxx xx xx"></label><fieldset><legend>Ders Türü</legend><label class="radio"><input type="radio" name="type" value="Online" checked>Online</label><label class="radio"><input type="radio" name="type" value="Yüz yüze">Yüz yüze</label></fieldset><label class="full">Mesajınız<textarea name="message" rows="3"></textarea></label><button class="btn gold full" type="submit">WhatsApp'tan Başvuruyu Gönder →</button></form></div></section>
+<footer class="footer"><div class="container footer-inner"><b>Mustafa Hoca Fen ve Matematik</b><span>LGS • TYT • AYT • ÖABT</span><div><a href="https://wa.me/905378276452">WhatsApp</a><a href="#basvuru">Başvuru</a></div></div></footer>
+<div class="modal" id="modal"><div class="login"><button class="close" id="close">×</button><div style="font-size:36px">🎮</div><div class="mini">ÖĞRENCİ GİRİŞİ</div><h3>Özel içerik alanı</h3><p>Öğretmeninin verdiği şifreyi gir.</p><input id="password" type="password" placeholder="Şifre"><button class="btn gold" style="width:100%" id="login">Giriş Yap →</button><div class="error" id="error"></div></div></div>
 <script>
-document.querySelector('.menu').onclick=()=>document.querySelector('.links').classList.toggle('open');
-const loginModal=document.getElementById('loginModal');
-const openLogin=document.getElementById('openLogin');
-const closeLogin=document.getElementById('closeLogin');
-const loginButton=document.getElementById('loginButton');
-const passwordInput=document.getElementById('studentPassword');
-const loginError=document.getElementById('loginError');
-const studentContent=document.getElementById('studentContent');
-const STUDENT_PASSWORD='ogrenci123'; // GitHub Pages sürümünde gerçek gizlilik sağlamaz; kendi şifrenle değiştir.
-openLogin.onclick=()=>{loginModal.classList.add('show');loginModal.setAttribute('aria-hidden','false');passwordInput.focus();};
-closeLogin.onclick=()=>{loginModal.classList.remove('show');loginModal.setAttribute('aria-hidden','true');};
-loginModal.onclick=e=>{if(e.target===loginModal) closeLogin.onclick();};
-loginButton.onclick=()=>{if(passwordInput.value===STUDENT_PASSWORD){loginModal.classList.remove('show');studentContent.hidden=false;studentContent.scrollIntoView({behavior:'smooth'});passwordInput.value='';loginError.textContent='';}else{loginError.textContent='Şifre hatalı. Öğretmeninden aldığın şifreyi kontrol et.';}};
-passwordInput.addEventListener('keydown',e=>{if(e.key==='Enter') loginButton.click();});
-document.querySelectorAll('.links a').forEach(x=>x.onclick=()=>document.querySelector('.links').classList.remove('open'));
-document.getElementById('form').addEventListener('submit',e=>{
- e.preventDefault(); const d=new FormData(e.target);
- const msg=`Merhaba Mustafa Hocam, ders başvurusu yapmak istiyorum.%0A%0AAd Soyad: ${encodeURIComponent(d.get('name'))}%0ASınıf/Seviye: ${encodeURIComponent(d.get('level'))}%0ADers: ${encodeURIComponent(d.get('course'))}%0ADers Türü: ${encodeURIComponent(d.get('type'))}%0ATelefon: ${encodeURIComponent(d.get('phone'))}%0AMesaj: ${encodeURIComponent(d.get('message')||'-')}`;
- window.open('https://wa.me/905378276452?text='+msg,'_blank');
-});
+const menu=document.getElementById('menu'),links=document.getElementById('links');menu.onclick=()=>links.classList.toggle('open');
+const modal=document.getElementById('modal');document.getElementById('openLogin').onclick=()=>{modal.classList.add('show');document.getElementById('password').focus()};document.getElementById('close').onclick=()=>modal.classList.remove('show');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('show')};
+// ŞİFREYİ BURADAN DEĞİŞTİREBİLİRSİN: ogrenci123
+const STUDENT_PASSWORD='ogrenci123';
+document.getElementById('login').onclick=()=>{const p=document.getElementById('password').value;if(p===STUDENT_PASSWORD){modal.classList.remove('show');document.getElementById('studentContent').classList.add('show');document.getElementById('studentContent').scrollIntoView({behavior:'smooth'});document.getElementById('error').textContent='';}else document.getElementById('error').textContent='Şifre hatalı.'};
+document.getElementById('form').addEventListener('submit',e=>{e.preventDefault();const f=new FormData(e.target);const msg=`Merhaba Mustafa Hocam, ders başvurusu yapmak istiyorum.\n\nAd Soyad: ${f.get('name')}\nSınıf/Seviye: ${f.get('level')}\nDers: ${f.get('course')}\nTelefon: ${f.get('phone')}\nDers Türü: ${f.get('type')}\nMesaj: ${f.get('message')||'-'}`;window.open('https://wa.me/905378276452?text='+encodeURIComponent(msg),'_blank')});
 </script>
-</body>
-</html>
+</body></html>
