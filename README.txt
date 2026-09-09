@@ -1,11 +1,16 @@
-# Mustafa Hoca Fen Mat
+Mustafa Hoca Fen ve Matematik — özel ders sitesi.
 
-Mobil uyumlu özel ders web sitesi.
+Dersler:
+İlkokul Fen Bilimleri, İlkokul Matematik
+Ortaokul Fen Bilimleri, Ortaokul Matematik
+LGS Fen Bilimleri, LGS Matematik
+TYT Matematik, TYT Fizik, TYT Kimya, TYT Biyoloji
+AYT Matematik, AYT Fizik, AYT Kimya, AYT Biyoloji
+Fen Bilimleri ÖABT
 
-## Kullanım
-1. `index.html`, `style.css` ve `script.js` aynı klasörde kalsın.
-2. `script.js` içindeki `WHATSAPP_NUMBER` değerini kendi WhatsApp numaranla değiştir.
-3. `index.html` dosyasını tarayıcıda açarak siteyi test edebilirsin.
+WhatsApp: 0537 827 64 52
+2026 AGS Fen Bilimleri Türkiye 9.'su
+İlköğretim Matematik Öğretmenliği ile çift ana dal
+3+ yıl özel ders & dershane deneyimi
 
-## Ücretsiz yayınlama
-GitHub Pages, Netlify veya benzeri statik site hizmetlerine bu klasörü yükleyebilirsin.
+GitHub Pages'e yüklerken assets klasörünü de yükle.
