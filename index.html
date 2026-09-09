@@ -38,9 +38,9 @@ h1 span{color:var(--gold)}
 .btn{display:inline-flex;align-items:center;justify-content:center;border-radius:14px;padding:15px 23px;font-weight:800;border:1px solid transparent;cursor:pointer}
 .btn-gold{background:var(--gold);color:#102331}
 .btn-outline{border-color:#6c8799;color:#fff}
-.hero-photo-wrap{display:flex;justify-content:center;position:relative}
+.hero-photo-wrap{display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
 .hero-photo{width:min(390px,80vw);aspect-ratio:1/1;object-fit:cover;object-position:center top;border-radius:50%;border:8px solid var(--cream);background:#fff;box-shadow:0 20px 60px #0005}
-.badge{position:absolute;bottom:18px;right:4%;background:var(--gold);color:#102331;padding:17px 22px;border-radius:17px;text-align:center;font-weight:900}
+.badge{position:static;margin-top:18px;background:var(--gold);color:#102331;padding:17px 22px;border-radius:17px;text-align:center;font-weight:900;box-shadow:0 10px 25px #0002}
 .stats{display:flex;gap:0;margin-top:42px;flex-wrap:wrap}
 .stat{padding:0 28px 0 18px;border-left:2px solid #668296;min-width:160px}
 .stat b{display:block;font-size:16px} .stat small{color:#c5d2dc}
@@ -119,7 +119,7 @@ footer{background:#061c2c;color:#c7d4df;padding:28px 0;text-align:center}
  .stat{min-width:130px}
  .course-grid,.portal-grid,.form-grid{grid-template-columns:1fr}
  .full{grid-column:auto}
- .badge{font-size:12px;padding:12px 14px;bottom:5px}
+ .badge{font-size:12px;padding:12px 14px;margin-top:12px}
  section{padding:58px 0}
  .about h2{font-size:34px}
 }
@@ -172,7 +172,7 @@ footer{background:#061c2c;color:#c7d4df;padding:28px 0;text-align:center}
     <h2 class="section-title">Dersler</h2>
     <p class="section-sub">İhtiyacına uygun alanı seç, birlikte düzenli bir çalışma planı oluşturalım.</p>
     <div class="course-grid">
-      <article class="course-card"><h3>🏫 İlkokul</h3><ul><li>1. Sınıf Matematik</li><li>1. Sınıf Fen</li><li>2. Sınıf Matematik</li><li>2. Sınıf Fen</li><li>3. Sınıf Matematik</li><li>3. Sınıf Fen</li><li>4. Sınıf Matematik</li><li>4. Sınıf Fen</li></ul></article>
+      <article class="course-card"><h3>🏫 İlkokul</h3><ul><li>1. Sınıf Matematik</li><li>2. Sınıf Matematik</li><li>3. Sınıf Matematik</li><li>3. Sınıf Fen Bilimleri</li><li>4. Sınıf Matematik</li><li>4. Sınıf Fen Bilimleri</li></ul></article>
       <article class="course-card"><h3>📘 Ortaokul & LGS</h3><ul><li>5. Sınıf Matematik</li><li>5. Sınıf Fen</li><li>6. Sınıf Matematik</li><li>6. Sınıf Fen</li><li>7. Sınıf Matematik</li><li>7. Sınıf Fen</li><li>8. Sınıf Matematik</li><li>8. Sınıf Fen / LGS</li></ul></article>
       <article class="course-card"><h3>🎯 Lise • TYT & AYT</h3><ul><li>9-12. Sınıf Matematik</li><li>9-12. Sınıf Fizik</li><li>9-12. Sınıf Kimya</li><li>9-12. Sınıf Biyoloji</li><li>TYT Matematik</li><li>TYT Fizik</li><li>TYT Kimya</li><li>TYT Biyoloji</li><li>AYT Matematik</li><li>AYT Fizik</li><li>AYT Kimya</li><li>AYT Biyoloji</li></ul></article>
       <article class="course-card"><h3>🧑‍🏫 Fen Bilimleri ÖABT</h3><ul><li>ÖABT Fen Bilimleri</li><li>Fizik</li><li>Kimya</li><li>Biyoloji</li><li>Alan tekrarı</li><li>Soru çözümü</li><li>Deneme & takip</li></ul></article>
@@ -204,24 +204,33 @@ footer{background:#061c2c;color:#c7d4df;padding:28px 0;text-align:center}
       <h2>Öğrenci Girişi</h2>
       <p>Size özel çalışma materyalleri, sınıf dosyaları, oyunlar ve canlı ders alanına buradan ulaşabilirsiniz.</p>
       <button class="btn btn-gold" style="margin-top:20px;width:100%" onclick="openLogin('genel')">🔐 Öğrenci Paneline Gir</button>
+      <div id="generalWelcome" class="unlock" style="display:none;margin-top:18px;background:#fff;color:#162837">
+        <h4>✓ Öğrenci girişi başarılı</h4>
+        <p>Şimdi aşağıdaki ders ve içerik panellerinden istediğini seçebilirsin.</p>
+      </div>
     </div>
+
     <div class="portal">
-      <h3>📂 Öğrenci İçerikleri</h3>
-      <div class="portal-note">Her alan için ayrı şifre kullanılabilir. Butona bastığında ilgili şifre sorulur.</div>
-      <div class="portal-grid">
-        <div class="portal-item"><div><strong>🏫 İlkokul Matematik & Fen</strong><small>1 • 2 • 3 • 4. sınıflar</small></div><button onclick="openLogin('ilkokul')">Giriş</button></div>
-        <div class="portal-item"><div><strong>📘 Ortaokul Matematik & Fen</strong><small>5 • 6 • 7 • 8. sınıflar</small></div><button onclick="openLogin('ortaokul')">Giriş</button></div>
-        <div class="portal-item"><div><strong>📐 Lise Matematik</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('liseMat')">Giriş</button></div>
-        <div class="portal-item"><div><strong>⚡ Lise Fizik</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('fizik')">Giriş</button></div>
-        <div class="portal-item"><div><strong>🧪 Lise Kimya</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('kimya')">Giriş</button></div>
-        <div class="portal-item"><div><strong>🧬 Lise Biyoloji</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('biyoloji')">Giriş</button></div>
-        <div class="portal-item"><div><strong>🧑‍🏫 Fen Bilimleri ÖABT</strong><small>Alan hazırlık içerikleri</small></div><button onclick="openLogin('oabt')">Giriş</button></div>
-        <div class="portal-item"><div><strong>🎮 Oyunlar & Mini Testler</strong><small>Öğrenciye özel içerikler</small></div><button onclick="openLogin('oyun')">Giriş</button></div>
+      <h3>🔒 Öğrenci Paneli</h3>
+      <div class="portal-note" id="portalLockedNote">Ders klasörleri ve canlı ders alanı, öğrenci girişi yaptıktan sonra görünür.</div>
+
+      <div id="studentPanels" style="display:none">
+        <div class="portal-grid">
+          <div class="portal-item"><div><strong>🏫 İlkokul Matematik & Fen</strong><small>1 • 2 • 3 • 4. sınıflar</small></div><button onclick="openLogin('ilkokul')">Giriş</button></div>
+          <div class="portal-item"><div><strong>📘 Ortaokul Matematik & Fen</strong><small>5 • 6 • 7 • 8. sınıflar</small></div><button onclick="openLogin('ortaokul')">Giriş</button></div>
+          <div class="portal-item"><div><strong>📐 Lise Matematik</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('liseMat')">Giriş</button></div>
+          <div class="portal-item"><div><strong>⚡ Lise Fizik</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('fizik')">Giriş</button></div>
+          <div class="portal-item"><div><strong>🧪 Lise Kimya</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('kimya')">Giriş</button></div>
+          <div class="portal-item"><div><strong>🧬 Lise Biyoloji</strong><small>9 • 10 • 11 • 12. sınıflar</small></div><button onclick="openLogin('biyoloji')">Giriş</button></div>
+          <div class="portal-item"><div><strong>🧑‍🏫 Fen Bilimleri ÖABT</strong><small>Alan hazırlık içerikleri</small></div><button onclick="openLogin('oabt')">Giriş</button></div>
+          <div class="portal-item"><div><strong>🎮 Oyunlar & Mini Testler</strong><small>Öğrenciye özel içerikler</small></div><button onclick="openLogin('oyun')">Giriş</button></div>
+        </div>
+        <div class="live">
+          <div><b>🎥 Canlı Ders</b><br><small>Canlı derse katılmak için ayrı şifre gerekir.</small></div>
+          <button onclick="openLogin('canli')">🔐 Canlı Derse Gir</button>
+        </div>
       </div>
-      <div class="live">
-        <div><b>🎥 Canlı Ders</b><br><small>Canlı derse katılmak için ayrı şifre gerekir.</small></div>
-        <button onclick="openLogin('canli')">🔐 Canlı Derse Gir</button>
-      </div>
+
       <div id="protectedContent"></div>
     </div>
   </div>
@@ -295,14 +304,28 @@ function closeLogin(){document.getElementById("loginModal").classList.remove("sh
 document.getElementById("password").addEventListener("keydown",e=>{if(e.key==="Enter")checkLogin()});
 function checkLogin(){
   const p=document.getElementById("password").value;
-  if(p!==PASSWORDS[activeType]){document.getElementById("loginError").textContent="Şifre hatalı. Lütfen tekrar deneyin.";return}
+  if(p!==PASSWORDS[activeType]){
+    document.getElementById("loginError").textContent="Şifre hatalı. Lütfen tekrar deneyin.";
+    return;
+  }
+
   closeLogin();
+
+  // Genel öğrenci girişi başarılıysa diğer paneller görünür.
+  if(activeType==="genel"){
+    document.getElementById("studentPanels").style.display="block";
+    document.getElementById("generalWelcome").style.display="block";
+    document.getElementById("portalLockedNote").textContent="Girmek istediğin alanı seç. Her panelin kendi şifresi vardır.";
+    document.getElementById("studentPanels").scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+
   const box=document.getElementById("protectedContent");
   let content="";
   if(activeType==="canli"){
-    content=`<div class="unlock"><h4>🎥 Canlı Ders Alanı Açıldı</h4><p>Canlı derse katılmak için aşağıdaki butonu kullanabilirsin.</p><div class="resource-list"><a href="https://meet.google.com/jhr-hrgy-ivt" target="_blank" rel="noopener">🔗 Google Meet Canlı Dersine Katıl</a></div></div>`;
+    content=`<div class="unlock"><h4>🎥 Canlı Ders Alanı Açıldı</h4><p>Canlı derse katılmak için aşağıdaki bağlantıyı kullanabilirsin.</p><div class="resource-list"><a href="https://meet.google.com/jhr-hrgy-ivt" target="_blank" rel="noopener">🔗 Google Meet Canlı Dersine Katıl</a></div></div>`;
   } else {
-    content=`<div class="unlock"><h4>${TITLES[activeType]} açıldı ✓</h4><p>Bu alanı daha sonra PDF, video, oyun, mini test, ödev ve çalışma dosyalarıyla doldurabilirsin.</p><div class="resource-list"><a href="#basvuru">📚 Çalışma Planına Dön</a><a href="#dersler">📖 Ders Konularına Bak</a></div></div>`;
+    content=`<div class="unlock"><h4>${TITLES[activeType]} açıldı ✓</h4><p>Bu alana daha sonra PDF, video, oyun, mini test, ödev ve çalışma dosyaları eklenebilir.</p><div class="resource-list"><a href="#basvuru">📚 Çalışma Planına Dön</a><a href="#dersler">📖 Ders Konularına Bak</a></div></div>`;
   }
   box.innerHTML=content;
   box.scrollIntoView({behavior:"smooth",block:"center"});
